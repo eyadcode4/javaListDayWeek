@@ -18,25 +18,32 @@ public class DaysOfWeekTest {
     }
     @Test
     public void testDayInList() {
+        dayWeek.dayInList("Friday");
         assertTrue(dayWeek.dayInList("Friday"), "Friday should exist in the list.");
         
 
     }
 
     @Test
-    void testDayRemove() {
+    public void testDayRemove() {
         dayWeek.dayRemove("Sunday");
         assertEquals(6, dayWeek.daysLength(), "should have 6 days after removing sunday.");
 
     }
 
     @Test
-    void testDaySelect() {
+    public void testDaySelect() {
+        dayWeek.daySelect(3);
+        assertEquals("Sunday", dayWeek.daySelect(6), "The third day should be wedenday.");
+
 
     }
 
     @Test
-    void testDaysEmpty() {
+    public void testDaysEmpty() {
+        dayWeek.daysEmpty();
+        assertEquals(0, dayWeek.daysLength(), "should be 0 after empty.");
+
 
     }
 
